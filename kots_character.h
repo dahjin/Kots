@@ -30,7 +30,6 @@
 #define MOD_BOSSEXPLODE				53
 #define	MOD_FAKESHARD				54
 
-
 #if !defined(WIN32) && !defined(Sleep)
 
 #define Sleep(msecs) \
@@ -43,14 +42,13 @@
 
 #endif
 
-
 //define some new weapons
 //a none weapon isn't defined so we'll make our own (used for resist)
 #define WEAP_NONE				0
 #define WEAP_SABRE				1 /*So we keep the same weapon model as blaster*/
 #define WEAP_GRAPPLE			13
 
-//ctf grappling hook constants
+//Ctf grappling hook constants
 //speeds moved to kots_hook.c for convenience
 //#define CTF_GRAPPLE_SPEED						1200	/* speed of grapple in flight */
 //#define CTF_GRAPPLE_PULL_SPEED				1000	/* speed player is pulled at */
@@ -87,7 +85,7 @@ typedef enum {
 #define KOTS_GENDER_FEMALE			'F'
 
 //define Chat Protect Frames
-#define CHAT_PROTECT_FRAMES			200
+#define CHAT_PROTECT_FRAMES			150
 
 //define various base values
 #define KOTS_BASE_MAX_CUBES			200
@@ -126,10 +124,10 @@ typedef enum {
 #define KOTS_SPECTATOR_MODE_CHASE			1
 #define KOTS_SPECTATOR_MODE_EYES			2
 
-//define vitarmor bonuses
+//define Vitarmor bonuses
 #define VITA_BONUS		50
 
-//define vithealth bonuses
+//define Vithealth bonuses
 #define VITH_BONUS		35
 
 //define munition bonuses
@@ -145,7 +143,7 @@ typedef enum {
 #define TECH_RESIST_HARD    1.85
 #define TECH_RESIST_SUPER	2.25
 
-//define antiweapon enhancements
+//define Antiweapon enhancements
 #define ANTIWEAPON_BONUS		30
 #define ANTIWEAPON_REGEN_BONUS	10
 
@@ -395,7 +393,7 @@ typedef struct character_persist_s
 
 	//determine whether or not to persist
 	//we should persist if dead and possibly other situations
-	qboolean persist; 
+	qboolean persist;
 
 	//has weapons?
 	qboolean shotgun;
@@ -415,7 +413,6 @@ typedef struct character_persist_s
 	int rockets;
 	int cells;
 	int slugs;
-
 } character_persist_t;
 
 // Aldarn - hold all dmg + who did what here
@@ -465,10 +462,9 @@ spreewar_t spreewar;
 void spectator_respawn(edict_t *ent);
 qboolean IsNeutral(edict_t *ent);
 qboolean IsFemale(edict_t *ent);
-qboolean CheckTeamDamage (edict_t *targ, edict_t *attacker);
+qboolean CheckTeamDamage(edict_t *targ, edict_t *attacker);
 void Use_Quad(edict_t *ent, gitem_t *item);
-void SpawnDamage (int type, vec3_t origin, vec3_t normal, int damage);
-
+void SpawnDamage(int type, vec3_t origin, vec3_t normal, int damage);
 
 //Kots prototypes
 

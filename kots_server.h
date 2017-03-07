@@ -3,7 +3,7 @@
 
 #define MYSQL_HOST		"localhost"
 #define MYSQL_USER		"root"
-#define MYSQL_PASS		"lolderp123"
+#define MYSQL_PASS		"Password"
 //#define MYSQL_DB		"kots_dev" //dev server
 #define MYSQL_DB		"kots" //live server
 #define MYSQL_PORT		3306
@@ -94,7 +94,7 @@ extern array_t *kots_servers;
 void Kots_InitializeServer();
 void Kots_FreeServer();
 
-void Kots_AddRuneUpdateJob(void (*complete_callback)(struct jobitem_s *job));
+void Kots_AddRuneUpdateJob(void(*complete_callback)(struct jobitem_s *job));
 void Kots_AddIpbanUpdateJob();
 void Kots_ServerBanIp(edict_t *admin, edict_t *banned);
 qboolean Kots_CheckIpBan(edict_t *ent);
@@ -119,6 +119,5 @@ void Kots_AddMuteJob(mute_info_t *args);
 void Kots_AddUnmuteJob(mute_info_t *args);
 void Kots_AddServerUpdateJob();
 void Kots_ServerAddDebugMessage(char *message);
-
 
 #endif

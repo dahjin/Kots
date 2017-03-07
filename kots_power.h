@@ -20,8 +20,8 @@ typedef struct
 {
 	char *name;
 	int power;
-	void (*add)(edict_t *ent);
-	void (*resist)(edict_t *ent);
+	void(*add)(edict_t *ent);
+	void(*resist)(edict_t *ent);
 } powerpoint_t;
 
 powerpoint_t *Kots_GetPowerTree(char *name);
