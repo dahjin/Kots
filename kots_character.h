@@ -13,18 +13,18 @@
 #endif
 
 //define death mods
-#define MOD_GRAPPLE					34
-#define MOD_SABRE					40
-#define MOD_EXPACK					41
-#define MOD_SPIRAL					42
-#define MOD_BIDE					43
-#define	MOD_EMPATHY					44
+#define MOD_GRAPPLE				34
+#define MOD_SABRE				40
+#define MOD_EXPACK				41
+#define MOD_SPIRAL				42
+#define MOD_BIDE				43
+#define	MOD_EMPATHY				44
 #define	MOD_FAKEHEALTH				45
-#define MOD_SMITE					46
-#define MOD_MINE					47
-#define MOD_POISON					48
-#define MOD_CONFLAG					49
-#define MOD_FLAIL					50
+#define MOD_SMITE				46
+#define MOD_MINE				47
+#define MOD_POISON				48
+#define MOD_CONFLAG				49
+#define MOD_FLAIL				50
 #define	MOD_BIDERADIUS				51
 #define MOD_SPREEQUIT				52
 #define MOD_BOSSEXPLODE				53
@@ -46,12 +46,12 @@
 //a none weapon isn't defined so we'll make our own (used for resist)
 #define WEAP_NONE				0
 #define WEAP_SABRE				1 /*So we keep the same weapon model as blaster*/
-#define WEAP_GRAPPLE			13
+#define WEAP_GRAPPLE				13
 
 //Ctf grappling hook constants
 //speeds moved to kots_hook.c for convenience
-//#define CTF_GRAPPLE_SPEED						1200	/* speed of grapple in flight */
-//#define CTF_GRAPPLE_PULL_SPEED				1000	/* speed player is pulled at */
+//#define CTF_GRAPPLE_SPEED			1200	/* speed of grapple in flight */
+//#define CTF_GRAPPLE_PULL_SPEED		1000	/* speed player is pulled at */
 
 typedef enum {
 	CTF_GRAPPLE_STATE_FLY,
@@ -60,25 +60,25 @@ typedef enum {
 } ctfgrapplestate_t;
 
 //define experience constants
-#define KOTS_EXP_BASE				20
+#define KOTS_EXP_BASE			20
 #define KOTS_MONSTER_EXP_BASE		8
 #define KOTS_MONSTER_EXP_MIN		2
 #define KOTS_MONSTER_EXP_MAX		14
-#define KOTS_EXP_MIN				5
-#define KOTS_EXP_MAX				500
+#define KOTS_EXP_MIN			5
+#define KOTS_EXP_MAX			500
 #define KOTS_EXP_BREAK_BONUS		4.0
-#define KOTS_EXP_BREAK_MIN			30
+#define KOTS_EXP_BREAK_MIN		30
 #define KOTS_EXP_WARBREAK_BONUS		3.0
-#define KOTS_EXP_SPREE_MIN			15
+#define KOTS_EXP_SPREE_MIN		15
 #define KOTS_EXP_SPREE_BONUS		1.5
 #define KOTS_EXP_SPREE2_BONUS		2.0
 #define KOTS_EXP_SPREEWAR_BONUS		2.5
 #define KOTS_EXP_SPREEWAR_MIN		40
 #define KOTS_EXP_SPREEWAR_BREAK		80
-#define KOTS_EXP_2FER_BONUS			2.0
-#define KOTS_EXP_3FER_BONUS			3.0
-#define KOTS_EXP_2FER_MIN			20
-#define KOTS_EXP_3FER_MIN			40
+#define KOTS_EXP_2FER_BONUS		2.0
+#define KOTS_EXP_3FER_BONUS		3.0
+#define KOTS_EXP_2FER_MIN		20
+#define KOTS_EXP_3FER_MIN		40
 
 //define genders
 #define KOTS_GENDER_MALE			'M'
@@ -96,28 +96,28 @@ typedef enum {
 #define KOTS_THANKSTO_TIMER			2.0
 
 //define constant flashlight values
-#define KOTS_FLASHLIGHT_NO			0 /*flashlight not on character*/
+#define KOTS_FLASHLIGHT_NO		0 /*flashlight not on character*/
 #define KOTS_FLASHLIGHT_NORM		1 /*normal flashlight on character*/
 #define KOTS_FLASHLIGHT_MASTER		2 /*mastered flashlight on character*/
 
 //definite constant lasersight values
-#define KOTS_LASERSIGHT_OFF			0
-#define KOTS_LASERSIGHT_ON			1
+#define KOTS_LASERSIGHT_OFF		0
+#define KOTS_LASERSIGHT_ON		1
 #define KOTS_LASERSIGHT_BALL		2
 
 //define some more constants for items
 #define KOTS_ITEM_LIFTABLE					0x0100
-#define KOTS_ITEM_MONSTERTOUCHABLE			0x0200
+#define KOTS_ITEM_MONSTERTOUCHABLE				0x0200
 #define KOTS_ITEM_SHARD						0x0400
 #define KOTS_ITEM_IDABLE					0x0800
 #define KOTS_ITEM_REMOVE					0x1000
 #define KOTS_ITEM_TELEFRAG					0x2000
-#define KOTS_ITEM_LIFT_PREFERRED			0x4000 /* lift should give preference to these items */
+#define KOTS_ITEM_LIFT_PREFERRED				0x4000 /* lift should give preference to these items */
 
 //define armor constants
 #define ARMOR_INDEX			ITEM_INDEX(FindItem("Body Armor"))
 #define SABRE_INDEX			ITEM_INDEX(FindItem("Sabre"))
-#define BLASTER_INDEX		ITEM_INDEX(FindItem("Blaster"))
+#define BLASTER_INDEX			ITEM_INDEX(FindItem("Blaster"))
 
 //define spectator constants
 #define KOTS_SPECTATOR_MODE_FREE			0
@@ -145,38 +145,38 @@ typedef enum {
 
 //define Antiweapon enhancements
 #define ANTIWEAPON_BONUS		30
-#define ANTIWEAPON_REGEN_BONUS	10
+#define ANTIWEAPON_REGEN_BONUS		10
 
 //define character level bonuses
-#define CHAR_ARMOR_REGEN_BONUS	5
+#define CHAR_ARMOR_REGEN_BONUS		5
 
 //start at 20 to leave room for weapon expansion
 #define POW_EXPACK		20
 #define POW_SPIRAL		21
 #define POW_BIDE		22
 #define POW_THROW		23
-#define POW_ANTIWEAPON	24
+#define POW_ANTIWEAPON		24
 
 //define player abilities
-#define KOTS_PLAYER_AVAILABLE	0
-#define KOTS_PLAYER_DEXTERITY	1
-#define KOTS_PLAYER_STRENGTH	2
+#define KOTS_PLAYER_AVAILABLE		0
+#define KOTS_PLAYER_DEXTERITY		1
+#define KOTS_PLAYER_STRENGTH		2
 #define KOTS_PLAYER_KARMA		3
 #define KOTS_PLAYER_WISDOM		4
-#define KOTS_PLAYER_TECHNICAL	5
+#define KOTS_PLAYER_TECHNICAL		5
 #define KOTS_PLAYER_SPIRIT		6
 #define KOTS_PLAYER_RAGE		7
 #define KOTS_PLAYER_VITH		8
 #define KOTS_PLAYER_VITA		9
-#define KOTS_PLAYER_MUNITION	10
+#define KOTS_PLAYER_MUNITION		10
 
 //define power abilities
-#define KOTS_POWER_AVAILABLE	0
+#define KOTS_POWER_AVAILABLE		0
 #define KOTS_POWER_EXPACK		1
 #define KOTS_POWER_SPIRAL		2
 #define KOTS_POWER_BIDE			3
 #define KOTS_POWER_THROW		4
-#define KOTS_POWER_ANTIWEAPON	5
+#define KOTS_POWER_ANTIWEAPON		5
 
 //define some bonuses
 #define KOTS_BONUS_WEAPON		0.0475 /*4.75% per level bonus after level 6*/
@@ -248,6 +248,7 @@ typedef struct character_s
 	int score;
 	int shots;
 	int hits;
+	int total_hits;
 	//int level_kills; //not needed because this is tracked in our normal frags stat
 	int player_kills;
 	int level_killed;
