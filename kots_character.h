@@ -248,7 +248,6 @@ typedef struct character_s
 	int score;
 	int shots;
 	int hits;
-	int total_hits;
 	//int level_kills; //not needed because this is tracked in our normal frags stat
 	int player_kills;
 	int level_killed;
