@@ -648,6 +648,8 @@ void weapon_grenade_fire (edict_t *ent, qboolean held)
 
 	//SWB - Add to shot count 
 	++ent->character->shots;
+	++ent->character->total_shots;
+	
 	fire_grenade2 (ent, start, forward, damage, speed, timer, radius, radius_damage, held);
 
 	if (! ( (int)dmflags->value & DF_INFINITE_AMMO ) )
@@ -831,6 +833,7 @@ void weapon_grenadelauncher_fire (edict_t *ent)
 
 	//SWB
 	++ent->character->shots;
+	++ent->character->total_shots;
 
 	if (ent->character->cur_grenadelauncher >= 2)
 		radius = 160;
@@ -915,6 +918,7 @@ void Weapon_RocketLauncher_Fire (edict_t *ent)
 
 	//SWB
 	++ent->character->shots;
+	++ent->character->total_shots;
 
 	if (is_quad)
 	{
@@ -1076,6 +1080,7 @@ void Weapon_HyperBlaster_Fire (edict_t *ent)
 
 			//SWB
 			++ent->character->shots;
+			++ent->character->total_shots;
 
 			Blaster_Fire (ent, offset, damage, true, effect);
 			if (! ( (int)dmflags->value & DF_INFINITE_AMMO ) )
@@ -1172,6 +1177,7 @@ void Machinegun_Fire (edict_t *ent)
 
 	//SWB
 	++ent->character->shots;
+	++ent->character->total_shots;
 
 	if (is_quad)
 	{
@@ -1238,6 +1244,7 @@ void Chaingun_Fire (edict_t *ent)
 {
 	int			i;
 	int			shots;
+	int			total_shots;
 	vec3_t		start;
 	vec3_t		forward, right, up;
 	float		r, u;
@@ -1292,15 +1299,19 @@ void Chaingun_Fire (edict_t *ent)
 
 	if (ent->client->ps.gunframe <= 9)
 		shots = 1;
+		total_shots = 1;
 	else if (ent->client->ps.gunframe <= 14)
 	{
 		if (ent->client->buttons & BUTTON_ATTACK)
 			shots = 2;
+			total_shots = 2;
 		else
 			shots = 1;
+			total_shots = 1;
 	}
 	else
 		shots = 3;
+		total_shots = 3;
 
 	if (ent->client->pers.inventory[ent->client->ammo_index] < shots)
 		shots = ent->client->pers.inventory[ent->client->ammo_index];
@@ -1343,6 +1354,7 @@ void Chaingun_Fire (edict_t *ent)
 
 		//SWB - increment shots
 		ent->character->shots += 1;
+		ent->character->total_shots += 1;
 
 		fire_bullet (ent, start, forward, damage, kick, DEFAULT_BULLET_HSPREAD, DEFAULT_BULLET_VSPREAD, MOD_CHAINGUN);
 	}
@@ -1405,6 +1417,7 @@ void weapon_shotgun_fire (edict_t *ent)
 
 	//SWB
 	++ent->character->shots;
+	++ent->character->total_shots;
 
 	if (is_quad)
 	{
@@ -1482,6 +1495,7 @@ void weapon_supershotgun_fire (edict_t *ent)
 	is_silenced = (ent->character->cur_supershotgun >= 1 ? MZ_SILENCED : is_silenced);
 
 	ent->character->shots += 2; //since the ssg fires twice
+	ent->character->total_shots += 2;
 
 	AngleVectors (ent->client->v_angle, forward, right, NULL);
 
@@ -1562,6 +1576,7 @@ void weapon_railgun_fire (edict_t *ent)
 
 	//SWB
 	++ent->character->shots;
+	++ent->character->total_shots;
 
 	if (is_quad)
 	{
