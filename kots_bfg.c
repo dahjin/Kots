@@ -46,6 +46,7 @@ void weapon_kotsbfg_fire (edict_t *ent)
 		damage = Kots_RandDivide(damage, 2);
 
 	++ent->character->shots;
+	++ent->character->total_shots;
 
 	if (is_quad)
 		damage *= 4;
