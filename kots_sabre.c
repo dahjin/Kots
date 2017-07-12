@@ -60,6 +60,7 @@ void weapon_sabre_fire (edict_t *ent)
 	}
 
 	++ent->character->shots;
+	++ent->character->total_shots;
 
 	if (is_quad)
 		damage *= 4;
