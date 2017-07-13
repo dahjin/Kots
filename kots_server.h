@@ -8,7 +8,7 @@
 #define MYSQL_DB		"kots" //live server
 #define MYSQL_PORT		3306
 
-#define KOTS_SERVER_SUCCESS				0
+#define KOTS_SERVER_SUCCESS			0
 #define KOTS_SERVER_CONNECTIONDOWN		1
 #define KOTS_SERVER_INVALIDCHAR			2
 #define KOTS_SERVER_INVALIDPASS			3
@@ -21,7 +21,7 @@
 #define KOTS_CHARINFO_TYPE_LOGIN		1
 #define KOTS_CHARINFO_TYPE_SAVE			2
 #define KOTS_CHARINFO_TYPE_KOTSINFO		3
-#define KOTS_CHARINFO_TYPE_POINTLIST	4
+#define KOTS_CHARINFO_TYPE_POINTLIST		4
 
 #include "kots_dbthread.h"
 #include "kots_character.h"
