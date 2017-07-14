@@ -1,5 +1,7 @@
 Todo
 
+Add a way Sync total hits and shots to Database?
+
 Add Accuracy king title
 
 Add Pm system 
